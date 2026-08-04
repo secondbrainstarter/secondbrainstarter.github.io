@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Brain Starter — Vorschau</title>
+<meta property="og:title" content="Second Brain Starter — Vorschau">
+<meta property="og:description" content="Second Brain Starter — free Obsidian templates and practical note-system workflows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://secondbrainstarter.github.io/demo/second-brain-starter-demo.html">
+<meta property="og:site_name" content="Second Brain Starter">
+<meta property="og:image" content="https://secondbrainstarter.github.io/img/hero-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Second Brain Starter — Vorschau">
+<meta name="twitter:description" content="Second Brain Starter — free Obsidian templates and practical note-system workflows.">
+<meta name="twitter:image" content="https://secondbrainstarter.github.io/img/hero-dashboard.png">
+<style>
+/* Second Brain Starter — Demo-CSS (abgeleitet aus custom.css v0.4) */
+:root {
+  --sbs-accent: #7c5cff;
+  --sbs-accent-strong: #5b3ee0;
+  --sbs-accent-soft: #ece7ff;
+  --sbs-card-bg: #ffffff;
+  --sbs-card-border: #e5e2ee;
+  --sbs-text: #2e2a3a;
+  --sbs-text-muted: #8a8599;
+  --sbs-table-stripe: #f6f4fc;
+  --sbs-success: #2e9e6b;
+  --sbs-bg: #faf9fd;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sbs-accent: #a48cff;
+    --sbs-accent-strong: #c3b2ff;
+    --sbs-accent-soft: #2c2647;
+    --sbs-card-bg: #1e1b2e;
+    --sbs-card-border: #35304d;
+    --sbs-text: #e8e4f5;
+    --sbs-text-muted: #9c94b8;
+    --sbs-table-stripe: #221e36;
+    --sbs-success: #4fc48d;
+    --sbs-bg: #16131f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--sbs-bg);
+  color: var(--sbs-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.demo-shell { display: flex; min-height: 100vh; }
+.demo-nav {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--sbs-card-bg);
+  border-right: 1px solid var(--sbs-card-border);
+  padding: 1.25rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.demo-nav h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sbs-text-muted);
+  margin: 0 0 0.75rem;
+}
+.demo-nav a {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  color: var(--sbs-text);
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+.demo-nav a:hover, .demo-nav a.active {
+  background: var(--sbs-accent-soft);
+  color: var(--sbs-accent-strong);
+}
+.demo-content {
+  flex: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 4rem;
+}
+.demo-content h1 {
+  border-bottom: 2px solid var(--sbs-accent-soft);
+  padding-bottom: 0.35em;
+  letter-spacing: -0.01em;
+}
+.demo-content h2 { color: var(--sbs-accent-strong); }
+.demo-content a { color: var(--sbs-accent-strong); }
+.demo-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+.demo-content th {
+  background: var(--sbs-accent-soft);
+  color: var(--sbs-accent-strong);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+}
+.demo-content td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--sbs-card-border); }
+.demo-content tr:nth-child(even) td { background: var(--sbs-table-stripe); }
+.demo-content blockquote {
+  border-left: 3px solid var(--sbs-accent);
+  margin: 1rem 0;
+  padding: 0.1rem 1rem;
+  color: var(--sbs-text-muted);
+  background: var(--sbs-accent-soft);
+  border-radius: 0 8px 8px 0;
+}
+.demo-content code {
+  background: var(--sbs-accent-soft);
+  color: var(--sbs-accent-strong);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+.demo-content pre {
+  background: var(--sbs-card-bg);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.demo-content pre code { background: none; padding: 0; color: var(--sbs-text); }
+.demo-content input[type="checkbox"] { accent-color: var(--sbs-accent); }
+.demo-content li:has(> input[type="checkbox"]:checked) {
+  color: var(--sbs-text-muted);
+  text-decoration: line-through;
+}
+.callout {
+  border: 1px solid var(--sbs-card-border);
+  border-left: 4px solid var(--sbs-accent);
+  background: var(--sbs-card-bg);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.callout-title { font-weight: 600; margin-bottom: 0.4rem; color: var(--sbs-accent-strong); }
+.callout[data-callout="karte"] {
+  border-left: 4px solid var(--sbs-accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.demo-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sbs-card-border);
+  font-size: 0.85rem;
+  color: var(--sbs-text-muted);
+}
+.demo-banner {
+  background: var(--sbs-accent-soft);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 8px;
+  color: var(--sbs-text-muted);
+  font-size: 0.85rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 2rem;
+}
+@media print {
+  .demo-nav { display: none; }
+  body { background: #fff; }
+}
+
+</style>
+</head>
+<body>
+<div class="demo-shell">
+  <nav class="demo-nav">
+    <h3>Second Brain Starter — Vorschau</h3>
+    <a href="#second-brain-start" class="active">Dashboard</a>
+<a href="#tagesnote">Vorlage Tagesnote</a>
+<a href="#projektnote">Vorlage Projektnote</a>
+<a href="#para-in-10-minuten">Guide: PARA</a>
+<a href="#taegliche-routine">Guide: Tagesroutine</a>
+    <div class="demo-footer">Gerendert aus dem Original-Vault · Kein
+    Obsidian nötig · Design: Second Brain Starter</div>
+  </nav>
+  <main class="demo-content">
+    <div class="demo-banner">Vorschau: Vorlagen-Platzhalter ({{date}}, {{title}}) sind hier mit Beispieldaten gefüllt — im echten Vault werden sie beim Einfügen automatisch ersetzt.</div>
+    <section id="second-brain-start" class="demo-page">
+<h1>🧠 Second Brain Start</h1>
+<blockquote>
+<p>Dein Zuhause im Vault. Diese Seite bündelt alles Wichtige: von hier aus
+erreichst du jeden Themen-Hub, startest deine Routine und findest jede
+Notiz wieder.</p>
+</blockquote>
+<h2>🗺️ Themen-Hubs (MOCs)</h2>
+<table>
+<thead>
+<tr>
+<th>Hub</th>
+<th>Wofür?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Projekte-Übersicht</em></td>
+<td>Aktive Projekte, nächste Schritte, Archiv</td>
+</tr>
+<tr>
+<td><em>Lese- und Lern-MOC</em></td>
+<td>Bücher, Artikel, Lernprojekte</td>
+</tr>
+<tr>
+<td><em>Zettelkasten-MOC</em></td>
+<td>Literatur- &amp; Permanentnoten — dein Wissensnetz</td>
+</tr>
+<tr>
+<td><em>Finanzen-MOC</em></td>
+<td>Budget, Sparziele, Versicherungen</td>
+</tr>
+<tr>
+<td><em>Gesundheit-MOC</em></td>
+<td>Routinen, Termine, Verlauf</td>
+</tr>
+<tr>
+<td><em>Arbeit und Karriere-MOC</em></td>
+<td>Meetings, Weiterbildung, Netzwerk</td>
+</tr>
+<tr>
+<td><em>AI-Werkzeuge-MOC</em></td>
+<td>Tools, Use-Cases, Experimente</td>
+</tr>
+</tbody>
+</table>
+<h2>⚡ Schnell erfassen (unter 30 Sekunden)</h2>
+<ol>
+<li>Neue Notiz anlegen (<code>Ctrl/Cmd+N</code>) — landet automatisch in <code>00_Inbox</code>.</li>
+<li>Stichwort reinschreiben, fertig. Sortieren kommt abends (Regeln:
+   <em>Inbox-Regeln</em>).</li>
+</ol>
+<h2>📅 Heute &amp; diese Woche</h2>
+<ul>
+<li><strong>Tagesnote:</strong> Vorlage <a href="#tagesnote">Tagesnote</a> → Ordner <code>06_Daily/</code>, Dateiname = Datum
+  (z.B. <code>2026-08-03.md</code>)</li>
+<li><strong>Sonntag:</strong> <em>Wochenrückblick</em> (10–15 Min)</li>
+<li><strong>Monatsende:</strong> <em>Monatsrückblick</em> (15–20 Min)</li>
+</ul>
+<h3>Tagesnotizen (Live-Suche)</h3>
+<pre><code class="language-search">path:&quot;06_Daily&quot;
+</code></pre>
+<blockquote>
+<p>Der Such-Block oben ist eine Live-Suche — Kernfunktion von Obsidian, kein
+Plugin nötig.</p>
+</blockquote>
+<h2>🧠 So funktioniert der Vault (3 Regeln)</h2>
+<ol>
+<li><strong>Erfassen, nicht sortieren</strong> — alles erst in die Inbox.</li>
+<li><strong>Eine Notiz, eine Idee</strong> — in eigenen Worten (Zettelkasten).</li>
+<li><strong>Immer verlinken</strong> — jede Notiz bekommt mindestens einen <code>[[Link]]</code>.</li>
+</ol>
+<h2>📚 System &amp; Methodik</h2>
+<ul>
+<li><em>Vault-README</em> — 10-Minuten-Start &amp; Struktur</li>
+<li><a href="#para-in-10-minuten">PARA-in-10-Minuten</a> — Ordner-Logik in 10 Minuten</li>
+<li><em>Zettelkasten-einfach</em> — Wissen, das bleibt</li>
+<li><a href="#taegliche-routine">Taegliche-Routine</a> — die 17-Minuten-Tagesroutine</li>
+<li><em>Methodik-Übersicht</em> — alle Guides (DE+EN)</li>
+<li><em>Alle 14 Vorlagen</em> — nach Nutzung gruppiert</li>
+</ul>
+<h2>🧭 Navigation</h2>
+<ul>
+<li><strong>Schnell öffnen:</strong> <code>Ctrl/Cmd+O</code> → Namen tippen.</li>
+<li><strong>Ordner durchsuchen:</strong> Suchfeld → <code>path:"Ordner"</code> (z.B. <code>path:"02_Areas"</code>).</li>
+<li><strong>Diese Seite anpinnen:</strong> Tab-Kontextmenü → <em>Pin</em> — so bleibt das Dashboard
+  immer griffbereit.</li>
+</ul>
+</section>
+<section id="tagesnote" class="demo-page">
+<h1>2026-08-03 — Tagesnote</h1>
+<blockquote>
+<p><strong>Platzhalter-Hinweis:</strong> <code>2026-08-03</code> wird beim Einfügen automatisch durch das
+heutige Datum ersetzt (Templates-Plugin, Kernfunktion von Obsidian).</p>
+</blockquote>
+<h2>🎯 3 Ziele heute</h2>
+<ul>
+<li><input type="checkbox" disabled>  1. <strong>Ziel 1</strong> (wichtigstes zuerst)</li>
+<li><input type="checkbox" disabled>  2. Ziel 2</li>
+<li><input type="checkbox" disabled>  3. Ziel 3</li>
+</ul>
+<h2>✅ Fokus</h2>
+<p>Woran arbeite ich, wenn ich nur EINE Sache schaffe?</p>
+<blockquote>
+<p>(Eine Zeile. Das ist der Satz, der den Tag rettet, wenn alles drunter und drüber geht.)</p>
+</blockquote>
+<h2>📥 Inbox (wird am Abend verarbeitet)</h2>
+<ul>
+<li><input type="checkbox" disabled>  Gedanken &amp; Erkenntnisse des Tages hier kurz festhalten</li>
+<li><input type="checkbox" disabled>  Abends: Inbox-Regeln anwenden (siehe <code>00_Inbox/_Inbox-README.md</code>)</li>
+</ul>
+<h2>📓 Journal</h2>
+<ul>
+<li><strong>Heute gut war:</strong> …</li>
+<li><strong>Heute gelernt:</strong> …</li>
+<li><strong>Morgen wichtig:</strong> …</li>
+</ul>
+<h2>🔗 Verbindungen</h2>
+<ul>
+<li>Letzte Tagesnote: <code>06_Daily/</code> (gleicher Ordner — chronologisch sortiert)</li>
+<li>Wochenrückblick am Sonntag: Vorlage <code>07_Templates/Wochenrueckblick.md</code></li>
+</ul>
+</section>
+<section id="projektnote" class="demo-page">
+<h1>Website-Relaunch — Projektnote</h1>
+<blockquote>
+<p><strong>Platzhalter:</strong> <code>Website-Relaunch</code> = Name der neuen Notiz (z.B. "Website-Relaunch"),
+<code>2026-08-03</code> = heutiges Datum.</p>
+</blockquote>
+<h2>🎯 Ziel (ein Satz)</h2>
+<blockquote>
+<p>Was ist DAS Ergebnis, wenn das Projekt fertig ist?</p>
+</blockquote>
+<h2>✅ Erfolgskriterium</h2>
+<blockquote>
+<p>Woran erkennst du objektiv, dass es fertig ist? (z.B. "Homepage live unter neuer Domain")</p>
+</blockquote>
+<h2>🗓️ Nächste Schritte</h2>
+<ul>
+<li><input type="checkbox" disabled>  Schritt 1 (kleinster sinnvoller Schritt zuerst!)</li>
+<li><input type="checkbox" disabled>  Schritt 2</li>
+<li><input type="checkbox" disabled>  Schritt 3</li>
+</ul>
+<h2>📦 Abhängigkeiten / Ressourcen</h2>
+<ul>
+<li>Was brauche ich? (Wissen, Kontakte, Budget, Tools)</li>
+</ul>
+<h2>🧠 Notizen &amp; Entscheidungen</h2>
+<ul>
+<li>Datum — Entscheidung/Gedanke</li>
+<li>(Chronologisch ergänzen; wichtig für den Rückblick)</li>
+</ul>
+<h2>✅ Abschluss (ausfüllen, wenn fertig)</h2>
+<ul>
+<li><strong>Fertig am:</strong> …</li>
+<li><strong>Was habe ich gelernt?</strong> …</li>
+<li><strong>Nächster Schritt:</strong> Ordner nach <code>04_Archive/</code> verschieben — nie löschen!</li>
+</ul>
+<h2>🔗 Verbindungen</h2>
+<ul>
+<li>Projekt-Unterlagen: im eigenen Unterordner <code>01_Projects/&lt;Projektname&gt;/</code></li>
+<li>Verwandte Themen: <em>Projekte-Übersicht</em></li>
+</ul>
+</section>
+<section id="para-in-10-minuten" class="demo-page">
+<h1>PARA in 10 Minuten</h1>
+<blockquote>
+<p>Die Ordner-Logik dieses Vaults. Nach 10 Minuten verstehst du, wohin jede
+Notiz gehört — und warum du nie wieder lange suchen musst.</p>
+</blockquote>
+<h2>Die Idee</h2>
+<p>PARA steht für vier Ordner-Zwecke. Alles, was du je notierst, passt in genau
+einen davon:</p>
+<table>
+<thead>
+<tr>
+<th>Ordner</th>
+<th>Zweck</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>01_Projects</code></td>
+<td>Etwas mit <strong>Enddatum</strong></td>
+<td>Steuererklärung, Umzug, Website</td>
+</tr>
+<tr>
+<td><code>02_Areas</code></td>
+<td>Dauerthema <strong>ohne Enddatum</strong></td>
+<td>Gesundheit, Finanzen, Familie</td>
+</tr>
+<tr>
+<td><code>03_Resources</code></td>
+<td>Wissen &amp; Ideen</td>
+<td>Buchnotiz, Artikel, Rezept</td>
+</tr>
+<tr>
+<td><code>04_Archive</code></td>
+<td>Abgeschlossen / inaktiv</td>
+<td>Altes Projekt, beendete Bereichs-Doku</td>
+</tr>
+</tbody>
+</table>
+<h2>Die eine Frage</h2>
+<blockquote>
+<p><strong>Hat das ein Enddatum?</strong></p>
+</blockquote>
+<ul>
+<li><strong>Ja</strong> → <code>01_Projects</code></li>
+<li><strong>Nein</strong> → <code>02_Areas</code></li>
+<li><strong>Nur Wissen?</strong> → <code>03_Resources</code></li>
+<li><strong>Vorbei?</strong> → <code>04_Archive</code> (verschieben, nie löschen)</li>
+</ul>
+<p>Damit ist fast jede Einordnung in 5 Sekunden erledigt.</p>
+<h2>Der Weg einer Notiz</h2>
+<ol>
+<li>Alles landet zuerst in <code>00_Inbox</code> (<em>Inbox-Regeln</em>).</li>
+<li>Bei der täglichen Verarbeitung entscheidest du mit der einen Frage.</li>
+<li>Aktive Projekte bekommen eine Projektnote (<a href="#projektnote">Projektnote</a>).</li>
+<li>Abgeschlossenes wandert in <code>04_Archive</code> — dein Vault bleibt schlank.</li>
+</ol>
+<h2>Typische Fehler</h2>
+<ul>
+<li><strong>Zu viele Projekte offen:</strong> Alles ohne konkretes Enddatum ist ein Bereich.</li>
+<li><strong>Ordner-Pingpong:</strong> Lieber erst in der Inbox lassen, als dreimal umziehen.</li>
+<li><strong>Löschen statt Archivieren:</strong> Archiv kostet nichts und schützt vor Reue.</li>
+</ul>
+<div class="callout" data-callout="tip">
+<div class="callout-title">Merksatz</div>
+Die Inbox ist dein Eingang, das Archiv dein Friedhof — und alles dazwischen
+beantwortet nur eine Frage: *Enddatum: ja oder nein?*
+</div>
+
+<p>Weiter: <em>Zettelkasten-einfach</em> · <a href="#taegliche-routine">Taegliche-Routine</a> · <a href="#second-brain-start">Second Brain Start</a></p>
+</section>
+<section id="taegliche-routine" class="demo-page">
+<h1>Die tägliche Routine (17 Minuten)</h1>
+<blockquote>
+<p>Ein System lebt von der Wiederholung. Diese 17 Minuten pro Tag halten deinen
+Second Brain sauber — ohne dass du dich zwingen musst.</p>
+</blockquote>
+<h2>Morgens (7 Minuten)</h2>
+<ol>
+<li><strong>Tagesnote öffnen</strong> (<a href="#tagesnote">Tagesnote</a>) — Datum notieren, Tag kurz planen.</li>
+<li><strong>Top 3</strong> des Tages festlegen (nicht mehr als drei!).</li>
+<li><strong>Inbox kurz scannen</strong> (30 Sekunden): Gibt es etwas Dringendes von gestern?</li>
+</ol>
+<h2>Abends (10 Minuten)</h2>
+<ol>
+<li><strong>Inbox verarbeiten</strong> — die 5 Schritte aus <em>Inbox-Regeln</em>:
+   entscheiden, verschieben, verlinken.</li>
+<li><strong>Neue Notizen verlinken</strong> — mindestens ein <code>[[Link]]</code> pro Notiz.</li>
+<li><strong>Tagesnote abschließen</strong> — kurz notieren, was erledigt ist.</li>
+</ol>
+<h2>Wöchentlich (Sonntag, 10–15 Minuten)</h2>
+<ul>
+<li><em>Wochenrückblick</em> öffnen: Was lief gut? Was nehme ich mir
+  für die Woche vor?</li>
+</ul>
+<h2>Monatlich (letzter Tag, 15–20 Minuten)</h2>
+<ul>
+<li><em>Monatsrückblick</em>: Trends erkennen, System justieren.</li>
+</ul>
+<h2>Wenn du nur 5 Minuten hast</h2>
+<ol>
+<li>Alles in die Inbox werfen (erfassen, nicht sortieren).</li>
+<li>Eine Sache verschieben oder verlinken.</li>
+<li>Fertig — der Rest wartet bis morgen.</li>
+</ol>
+<div class="callout" data-callout="tip">
+<div class="callout-title">Der Trick</div>
+Die Routine ist ein Gewohnheits-Anker: gleiche Uhrzeit, gleicher Ort.
+Nach zwei Wochen fragst du dich nicht mehr "soll ich?", sondern machst es.
+</div>
+
+<p>Weiter: <a href="#para-in-10-minuten">PARA-in-10-Minuten</a> · <em>Zettelkasten-einfach</em> · <a href="#second-brain-start">Second Brain Start</a></p>
+</section>
+  </main>
+</div>
+</body>
+</html>

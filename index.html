@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Second Brain in 10 Minutes — free Obsidian mini-vault: 3 folders, 3 rules, 6 templates (EN+DE). Start your note-taking system today. / Kostenloser Obsidian-Mini-Vault: 3 Ordner, 3 Regeln, 6 Vorlagen (DE+EN).">
+<title>Second Brain in 10 Minutes — Free Obsidian Mini-Vault</title>
+<meta property="og:title" content="Second Brain in 10 Minutes — Free Obsidian Mini-Vault">
+<meta property="og:description" content="Second Brain in 10 Minutes — free Obsidian mini-vault: 3 folders, 3 rules, 6 templates (EN+DE). Start your note-taking system today. / Kostenloser Obsidian-Mini-Vault: 3 Ordner, 3 Regeln, 6 Vorlagen (DE+EN).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://secondbrainstarter.github.io/">
+<meta property="og:site_name" content="Second Brain Starter">
+<meta property="og:image" content="https://secondbrainstarter.github.io/img/hero-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Second Brain in 10 Minutes — Free Obsidian Mini-Vault">
+<meta name="twitter:description" content="Second Brain in 10 Minutes — free Obsidian mini-vault: 3 folders, 3 rules, 6 templates (EN+DE). Start your note-taking system today. / Kostenloser Obsidian-Mini-Vault: 3 Ordner, 3 Regeln, 6 Vorlagen (DE+EN).">
+<meta name="twitter:image" content="https://secondbrainstarter.github.io/img/hero-dashboard.png">
+<style>
+/* ============================================================
+   Second Brain Starter — Landing-Page (Markenfarben aus custom.css)
+   Selbst-enthaltend: keine externen Ressourcen.
+   Bilingual EN-first (Sprach-Toggle, 2026-08-04).
+   ============================================================ */
+:root {
+  --sbs-accent: #7c5cff;
+  --sbs-accent-strong: #5b3ee0;
+  --sbs-accent-soft: #ece7ff;
+  --sbs-card-bg: #ffffff;
+  --sbs-card-border: #e5e2ee;
+  --sbs-text: #2e2a3a;
+  --sbs-text-muted: #8a8599;
+  --sbs-table-stripe: #f6f4fc;
+  --sbs-success: #2e9e6b;
+  --sbs-bg: #faf9fd;
+  --sbs-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --sbs-shadow-lg: 0 12px 32px rgba(124, 92, 255, 0.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sbs-accent: #a48cff;
+    --sbs-accent-strong: #c3b2ff;
+    --sbs-accent-soft: #2c2647;
+    --sbs-card-bg: #1e1b2e;
+    --sbs-card-border: #35304d;
+    --sbs-text: #e8e4f5;
+    --sbs-text-muted: #9c94b8;
+    --sbs-table-stripe: #221e36;
+    --sbs-success: #4fc48d;
+    --sbs-bg: #16131f;
+    --sbs-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --sbs-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--sbs-bg);
+  color: var(--sbs-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  font-size: 17px;
+}
+h1, h2, h3 { line-height: 1.25; letter-spacing: -0.01em; }
+a { color: var(--sbs-accent-strong); }
+.container { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--sbs-bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sbs-card-border);
+}
+.nav-inner {
+  max-width: 960px; margin: 0 auto; padding: 0.8rem 1.25rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.nav-brand { font-weight: 700; color: var(--sbs-text); text-decoration: none; font-size: 0.95rem; }
+.nav-brand .dot { color: var(--sbs-accent); }
+.nav-links { display: flex; gap: 1.25rem; font-size: 0.92rem; }
+.nav-links a { color: var(--sbs-text-muted); text-decoration: none; }
+.nav-links a:hover { color: var(--sbs-accent-strong); }
+.lang-switch { display: flex; gap: 0.25rem; }
+.lang-btn {
+  background: var(--sbs-card-bg);
+  color: var(--sbs-text-muted);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.lang-btn.active { background: var(--sbs-accent); color: #fff; border-color: var(--sbs-accent); }
+@media (max-width: 640px) { .nav-links { display: none; } }
+
+/* ---------- Hero ---------- */
+.hero { padding: 4rem 0 2.5rem; text-align: center; }
+.hero .badge {
+  display: inline-block;
+  background: var(--sbs-accent-soft);
+  color: var(--sbs-accent-strong);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+.hero h1 { font-size: 2.6rem; margin: 0 0 1rem; }
+.hero .sub { font-size: 1.2rem; color: var(--sbs-text-muted); max-width: 620px; margin: 0 auto 1.8rem; }
+.cta-row { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.8rem; }
+.btn {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.85rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary {
+  background: var(--sbs-accent);
+  color: #fff;
+  box-shadow: var(--sbs-shadow-lg);
+}
+.btn-primary:hover { background: var(--sbs-accent-strong); }
+.btn-secondary {
+  background: var(--sbs-card-bg);
+  color: var(--sbs-text);
+  border-color: var(--sbs-card-border);
+}
+.btn-secondary:hover { border-color: var(--sbs-accent); color: var(--sbs-accent-strong); }
+.hero-mock {
+  max-width: 860px; margin: 0 auto;
+  background: var(--sbs-card-bg);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 14px;
+  box-shadow: var(--sbs-shadow-lg);
+  overflow: hidden;
+  text-align: left;
+}
+.hero-mock .mock-bar {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--sbs-table-stripe);
+  border-bottom: 1px solid var(--sbs-card-border);
+}
+.hero-mock .mock-bar span {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block;
+}
+.hero-mock .mock-bar .r { background: #ff5f57; }
+.hero-mock .mock-bar .y { background: #febc2e; }
+.hero-mock .mock-bar .g { background: #28c840; }
+.hero-mock .mock-bar .addr {
+  margin-left: 0.7rem; font-size: 0.75rem; color: var(--sbs-text-muted);
+}
+.hero-mock img { display: block; width: 100%; height: auto; }
+
+/* ---------- Sektionen ---------- */
+.section { padding: 3.5rem 0; }
+.section h2 { font-size: 1.7rem; margin: 0 0 0.4rem; }
+.section .lead { color: var(--sbs-text-muted); margin: 0 0 2rem; max-width: 640px; }
+.section.alt { background: var(--sbs-card-bg); border-top: 1px solid var(--sbs-card-border); border-bottom: 1px solid var(--sbs-card-border); }
+
+/* Feature-Karten */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem; }
+.card {
+  background: var(--sbs-card-bg);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 12px;
+  padding: 1.4rem 1.4rem 1.2rem;
+  box-shadow: var(--sbs-shadow);
+}
+.card .num {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: var(--sbs-accent-soft);
+  color: var(--sbs-accent-strong);
+  font-weight: 700; font-size: 0.95rem;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 0.8rem;
+}
+.card h3 { margin: 0 0 0.5rem; font-size: 1.08rem; }
+.card p { margin: 0; color: var(--sbs-text-muted); font-size: 0.95rem; }
+.card ul { margin: 0.5rem 0 0; padding-left: 1.1rem; color: var(--sbs-text-muted); font-size: 0.92rem; }
+
+/* Schritte */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; counter-reset: step; }
+.step { position: relative; padding-left: 3.2rem; }
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute; left: 0; top: 0;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--sbs-accent);
+  color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.step h3 { margin: 0.2rem 0 0.4rem; font-size: 1.05rem; }
+.step p { margin: 0; color: var(--sbs-text-muted); font-size: 0.95rem; }
+
+/* Vorschau */
+.demo-frame {
+  width: 100%; height: 620px;
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 12px;
+  background: var(--sbs-card-bg);
+  box-shadow: var(--sbs-shadow-lg);
+}
+.vorschau-note { margin-top: 0.9rem; font-size: 0.9rem; color: var(--sbs-text-muted); }
+.vorschau-note a { font-weight: 600; }
+
+/* Vollversion */
+.feature-list { list-style: none; padding: 0; margin: 0 0 1.6rem; }
+.feature-list li { padding: 0.55rem 0 0.55rem 2rem; position: relative; }
+.feature-list li::before {
+  content: "✓";
+  position: absolute; left: 0; top: 0.55rem;
+  color: var(--sbs-success); font-weight: 700;
+}
+
+/* Warteliste */
+.waitlist-box {
+  max-width: 560px;
+  background: var(--sbs-card-bg);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 14px;
+  box-shadow: var(--sbs-shadow);
+  padding: 2rem;
+}
+.waitlist-form { display: flex; flex-direction: column; gap: 0.8rem; }
+.waitlist-form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 10px;
+  background: var(--sbs-bg);
+  color: var(--sbs-text);
+  font-size: 1rem;
+}
+.waitlist-form input:focus { outline: 2px solid var(--sbs-accent); border-color: transparent; }
+.waitlist-hinweis { font-size: 0.88rem; color: var(--sbs-text-muted); margin: 0.9rem 0 0; }
+.waitlist-status { display: none; margin: 0.9rem 0 0; font-size: 0.92rem; color: var(--sbs-success); font-weight: 600; }
+.waitlist-status.visible { display: block; }
+
+/* FAQ */
+.faq details {
+  background: var(--sbs-card-bg);
+  border: 1px solid var(--sbs-card-border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+.faq summary { font-weight: 600; cursor: pointer; }
+.faq details p { margin: 0.7rem 0 0; color: var(--sbs-text-muted); }
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--sbs-card-border);
+  padding: 2rem 0 3rem;
+  font-size: 0.85rem;
+  color: var(--sbs-text-muted);
+  text-align: center;
+}
+.footer p { margin: 0.3rem 0; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.9rem; }
+  .hero { padding-top: 2.5rem; }
+  .section { padding: 2.5rem 0; }
+  .demo-frame { height: 480px; }
+}
+</style>
+<script>
+/* Sprach-Initialisierung VOR dem Body-Parsing (kein FOUC):
+   Prioritaet: ?lang= Parameter > localStorage > Standard EN. */
+(function () {
+  var lang = null;
+  var m = location.search.match(/[?&]lang=(en|de)/);
+  if (m) { lang = m[1]; }
+  if (!lang) {
+    try { lang = localStorage.getItem("sbs-lang") || "en"; } catch (e) { lang = "en"; }
+  }
+  if (lang !== "de" && lang !== "en") { lang = "en"; }
+  document.documentElement.lang = lang;
+  window.__sbsLang = lang;
+})();
+</script>
+<script data-goatcounter="https://secondbrainstarter.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">Second Brain <span class="dot">·</span> Starter</a>
+    <div class="nav-links">
+      <span class="lang-en"><a href="#features">What you get</a><a href="#vorschau">Live preview</a><a href="#vollversion">Full version</a><a href="#warteliste">Waitlist</a><a href="/blog/">Blog</a></span>
+      <span class="lang-de" hidden><a href="#features">Was du bekommst</a><a href="#vorschau">Live-Vorschau</a><a href="#vollversion">Vollversion</a><a href="#warteliste">Warteliste</a><a href="/blog/">Blog</a></span>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language / Sprache">
+      <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="lang-en">
+      <span class="badge">Free · For Obsidian · English + German</span>
+      <h1>Your Second Brain in 10 Minutes.</h1>
+      <p class="sub">A working note-taking system in the time it takes to drink a
+      coffee. Three folders, three rules, six templates (EN+DE) — afterwards you have
+      a place for everything that crosses your mind.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="second-brain-in-10-minuten-v0.2.zip" download>Download the Mini-Vault free (ZIP)</a>
+        <a class="btn btn-secondary" href="#vorschau">See the live preview</a>
+      </div>
+      <p class="waitlist-hinweis">Note: the mini vault now includes templates in
+      English <strong>and</strong> German (v0.2) — pick whichever works for you.
+      The full version ships with guides in both languages.</p>
+    </div>
+    <div class="lang-de" hidden>
+      <span class="badge">Kostenlos · Für Obsidian · Englisch + Deutsch</span>
+      <h1>Dein Second Brain in 10 Minuten.</h1>
+      <p class="sub">Ein funktionierendes Notiz-System in der Zeit, die ein Kaffee
+      braucht. Drei Ordner, drei Regeln, sechs Vorlagen (DE+EN) — danach hast du einen Ort
+      für alles, was dir durch den Kopf geht.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="second-brain-in-10-minuten-v0.2.zip" download>Mini-Vault kostenlos laden (ZIP)</a>
+        <a class="btn btn-secondary" href="#vorschau">Live-Vorschau ansehen</a>
+      </div>
+      <p class="waitlist-hinweis">Hinweis: Der Mini-Vault enthält die Vorlagen
+      jetzt auf Deutsch <strong>und</strong> Englisch (v0.2) — nimm, was dir
+      liegt. Die Vollversion enthält Guides in beiden Sprachen.</p>
+    </div>
+    <div class="hero-mock">
+      <div class="mock-bar"><span class="r"></span><span class="y"></span><span class="g"></span><span class="addr">Obsidian — Second Brain Starter</span></div>
+      <img src="img/hero-dashboard.png" alt="Preview of the Second Brain vault dashboard in Obsidian / Vorschau: Dashboard des Second Brain Vaults in Obsidian" loading="eager">
+    </div>
+  </div>
+</header>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="lang-en">
+      <h2>What you get</h2>
+      <p class="lead">No empty promise: the Mini-Vault is a fully set-up Obsidian
+      folder. Unzip, open, start.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="num">1</div>
+          <h3>3 folders that make sense</h3>
+          <p>No folder chaos. Just what you really need:</p>
+          <ul>
+            <li><strong>00_Inbox</strong> — everything lands here, empty it each evening</li>
+            <li><strong>06_Daily</strong> — daily notes &amp; journal</li>
+            <li><strong>07_Templates</strong> — 3 ready-made templates</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3>Templates with real structure — EN + DE</h3>
+          <p>No placeholder junk — notes you can use right away:</p>
+          <ul>
+            <li><strong>Daily note</strong> — goals, focus, review</li>
+            <li><strong>Project note</strong> — goal, success criterion, next step</li>
+            <li><strong>Permanent note</strong> — one thought, captured cleanly</li>
+            <li><strong>German versions too</strong> — Tagesnote, Projektnote, Permanentnote</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3>3 rules + the 17-minute routine</h3>
+          <p>The real trick is in the system, not in the app:</p>
+          <ul>
+            <li><strong>Capture, don’t sort</strong> — inbox first</li>
+            <li><strong>One note, one idea</strong></li>
+            <li><strong>Always link</strong> — a collection becomes a network</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lang-de" hidden>
+      <h2>Was du bekommst</h2>
+      <p class="lead">Kein leeres Versprechen: Der Mini-Vault ist ein komplett
+      eingerichteter Obsidian-Ordner zum Entpacken. Öffnen, loslegen.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="num">1</div>
+          <h3>3 Ordner, die Sinn ergeben</h3>
+          <p>Kein Ordner-Wirrwarr. Nur was du wirklich brauchst:</p>
+          <ul>
+            <li><strong>00_Inbox</strong> — alles landet hier, abends leeren</li>
+            <li><strong>06_Daily</strong> — Tagesnotizen &amp; Journal</li>
+            <li><strong>07_Templates</strong> — 3 fertige Vorlagen</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3>Vorlagen mit echter Struktur — DE + EN</h3>
+          <p>Kein Platzhalter-Müll, sondern sofort nutzbare Notizen:</p>
+          <ul>
+            <li><strong>Tagesnote</strong> — Ziele, Fokus, Rückblick</li>
+            <li><strong>Projektnote</strong> — Ziel, Erfolgskriterium, nächster Schritt</li>
+            <li><strong>Permanentnote</strong> — ein Gedanke, sauber festgehalten</li>
+            <li><strong>Auch auf Englisch</strong> — Daily-Note, Project-Note, Permanent-Note</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3>3 Regeln + 17-Minuten-Routine</h3>
+          <p>Der eigentliche Trick steckt im System, nicht in der App:</p>
+          <ul>
+            <li><strong>Erfassen, nicht sortieren</strong> — Inbox zuerst</li>
+            <li><strong>Eine Notiz, eine Idee</strong></li>
+            <li><strong>Immer verlinken</strong> — Sammlung wird Netzwerk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="so-gehts">
+  <div class="container">
+    <div class="lang-en">
+      <h2>How it works</h2>
+      <p class="lead">Three steps, ten minutes. After that the system is yours —
+      usable from tomorrow morning.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Install Obsidian</h3>
+          <p>Free from <a href="https://obsidian.md" target="_blank" rel="noopener">obsidian.md</a> — for Windows, macOS, Linux, iOS and Android.</p>
+        </div>
+        <div class="step">
+          <h3>Open the Mini-Vault</h3>
+          <p>Unzip, then choose “Open folder as vault” in Obsidian. Settings and design are pre-configured.</p>
+        </div>
+        <div class="step">
+          <h3>Create two notes</h3>
+          <p>Copy the daily note and project note from the templates. Done — start the 17-minute routine tomorrow (7 minutes in the morning, 10 in the evening).</p>
+        </div>
+      </div>
+    </div>
+    <div class="lang-de" hidden>
+      <h2>So funktioniert’s</h2>
+      <p class="lead">Drei Schritte, zehn Minuten. Danach gehört das System dir — täglich nutzbar ab morgen früh.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Obsidian installieren</h3>
+          <p>Kostenlos von <a href="https://obsidian.md" target="_blank" rel="noopener">obsidian.md</a> — für Windows, macOS, Linux, iOS und Android.</p>
+        </div>
+        <div class="step">
+          <h3>Mini-Vault öffnen</h3>
+          <p>ZIP entpacken, in Obsidian „Open folder as vault“ wählen. Einstellungen und Design sind bereits vorkonfiguriert.</p>
+        </div>
+        <div class="step">
+          <h3>Zwei Notizen anlegen</h3>
+          <p>Tagesnote + Projektnote aus den Vorlagen kopieren. Fertig — ab morgen die 17-Minuten-Routine (7 morgens, 10 abends).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vorschau">
+  <div class="container">
+    <h2>Live preview / Live-Vorschau</h2>
+    <div class="lang-en">
+      <p class="lead">This is what the vault looks like in Obsidian — rendered
+      here as an interactive preview (light &amp; dark follow your system setting).</p>
+    </div>
+    <div class="lang-de" hidden>
+      <p class="lead">So sieht der Vault in Obsidian aus — hier als interaktive
+      Vorschau gerendert (Light &amp; Dark je nach System-Einstellung).</p>
+    </div>
+    <iframe class="demo-frame" src="demo/second-brain-starter-demo.html"
+            title="Interactive preview of the Second Brain vault / Interaktive Vorschau des Second Brain Vaults" loading="lazy"></iframe>
+    <div class="lang-en">
+      <p class="vorschau-note">The preview shows the <strong>full version</strong> (Second Brain Starter) with dashboard, templates and method guides.
+      <a href="demo/second-brain-starter-demo.html" target="_blank" rel="noopener">Open the demo in a new tab →</a></p>
+    </div>
+    <div class="lang-de" hidden>
+      <p class="vorschau-note">Die Vorschau zeigt die <strong>Vollversion</strong> (Second Brain Starter) mit Dashboard, Vorlagen und Methodik-Guides.
+      <a href="demo/second-brain-starter-demo.html" target="_blank" rel="noopener">Demo in eigenem Tab öffnen →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="vollversion">
+  <div class="container">
+    <div class="lang-en">
+      <h2>The full version: Second Brain Starter</h2>
+      <p class="lead">The Mini-Vault is the entry point. Want more? Get the
+      complete system — available soon.</p>
+      <ul class="feature-list">
+        <li><strong>8 topic hubs + start dashboard</strong> — projects, finances, health, learning &amp; more from one page</li>
+        <li><strong>14 templates</strong> — meeting, goal, habit, book, decision, monthly review &amp; more</li>
+        <li><strong>6 method guides (EN + DE)</strong> — PARA, Zettelkasten, daily routine without jargon</li>
+        <li><strong>Complete design</strong> — light &amp; dark, print view, card layout</li>
+      </ul>
+      <a class="btn btn-primary" href="#warteliste">Coming soon — join the waitlist</a>
+    </div>
+    <div class="lang-de" hidden>
+      <h2>Die Vollversion: Second Brain Starter</h2>
+      <p class="lead">Der Mini-Vault ist der Einstieg. Wer mehr will, bekommt das
+      komplette System — in Kürze verfügbar.</p>
+      <ul class="feature-list">
+        <li><strong>8 Themen-Hubs + Start-Dashboard</strong> — Projekte, Finanzen, Gesundheit, Lernen &amp; mehr von einer Seite aus</li>
+        <li><strong>14 Vorlagen</strong> — Meeting, Ziel, Habit, Buch, Entscheidung, Monatsrückblick u.&nbsp;a.</li>
+        <li><strong>6 Methodik-Guides</strong> (DE + EN) — PARA, Zettelkasten, Tagesroutine ohne Fachjargon</li>
+        <li><strong>Vollständiges Design</strong> — Light &amp; Dark, Druckansicht, Karten-Layout</li>
+      </ul>
+      <a class="btn btn-primary" href="#warteliste">Erscheint in Kürze — auf die Warteliste</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="warteliste">
+  <div class="container">
+    <div class="lang-en">
+      <h2>Waitlist</h2>
+      <p class="lead">Be the first to know when the Second Brain Starter
+      launches — one email, no newsletter spam.</p>
+      <div class="waitlist-box">
+        <form class="waitlist-form" id="warteliste-form-en" novalidate
+              data-subject="Waitlist: Second Brain in 10 Minutes"
+              data-status="Your email program opens with a pre-filled message — just send it. Thank you!">
+          <input type="email" id="warteliste-email-en" name="email" placeholder="Your email address" required autocomplete="email">
+          <input type="text" id="warteliste-name-en" name="name" placeholder="First name (optional)" autocomplete="given-name">
+          <button class="btn btn-primary" type="submit">Join the waitlist</button>
+        </form>
+        <p class="waitlist-hinweis">Your email is used exclusively for the
+        waitlist notification — no sharing, no spam. Signing up opens your email
+        program with a pre-filled message; just hit send.</p>
+        <p class="waitlist-status" id="warteliste-status-en"></p>
+      </div>
+    </div>
+    <div class="lang-de" hidden>
+      <h2>Warteliste</h2>
+      <p class="lead">Sei als Erster informiert, wenn der Second Brain Starter
+      erscheint — einmalige Nachricht, kein Newsletter-Spam.</p>
+      <div class="waitlist-box">
+        <form class="waitlist-form" id="warteliste-form-de" novalidate
+              data-subject="Warteliste: Second Brain in 10 Minuten"
+              data-status="Dein E-Mail-Programm öffnet sich gleich mit einer vorgefertigten Nachricht — einfach abschicken. Danke!">
+          <input type="email" id="warteliste-email-de" name="email" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+          <input type="text" id="warteliste-name-de" name="name" placeholder="Vorname (optional)" autocomplete="given-name">
+          <button class="btn btn-primary" type="submit">Auf die Warteliste</button>
+        </form>
+        <p class="waitlist-hinweis">Deine E-Mail wird ausschließlich für die
+        Wartelisten-Benachrichtigung verwendet — keine Weitergabe, kein Spam.
+        Die Anmeldung öffnet dein E-Mail-Programm mit einer vorgefertigten
+        Nachricht; du musst sie nur abschicken.</p>
+        <p class="waitlist-status" id="warteliste-status-de"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="faq">
+  <div class="container">
+    <div class="lang-en">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Is this really free?</summary>
+          <p>Yes. The Mini-Vault is a free entry point — no subscription, no
+          hidden costs, no account required. License: personal, non-commercial
+          use (included in the ZIP).</p>
+        </details>
+        <details>
+          <summary>Do I need prior knowledge or a paid app?</summary>
+          <p>No. Obsidian is free. Install it, open the vault and read the three
+          rules — the guides are written without jargon.</p>
+        </details>
+        <details>
+          <summary>What is the difference to the full version?</summary>
+          <p>The Mini-Vault contains 3 folders, 3 rules and 6 templates
+          (3 English + 3 German). The full version
+          (Second Brain Starter) adds 8 topic hubs, 14 templates, 6 method
+          guides and the complete design. It launches soon — the waitlist will
+          let you know first.</p>
+        </details>
+        <details>
+          <summary>What happens to my email address?</summary>
+          <p>It is used only for the one-time notification when the full version
+          launches. No spam, no sharing with third parties.</p>
+        </details>
+      </div>
+    </div>
+    <div class="lang-de" hidden>
+      <h2>Häufige Fragen</h2>
+      <div class="faq">
+        <details>
+          <summary>Ist das wirklich kostenlos?</summary>
+          <p>Ja. Der Mini-Vault ist ein kostenloser Einstieg — kein Abo, keine
+          versteckten Kosten, keine Konto-Pflicht. Lizenz: persönliche,
+          nicht-kommerzielle Nutzung (liegt dem ZIP bei).</p>
+        </details>
+        <details>
+          <summary>Brauche ich Vorkenntnisse oder eine Bezahl-App?</summary>
+          <p>Nein. Obsidian ist kostenlos. Du installierst es, öffnest den Vault
+          und liest die drei Regeln — die Guides sind ohne Fachjargon geschrieben.</p>
+        </details>
+        <details>
+          <summary>Was ist der Unterschied zur Vollversion?</summary>
+          <p>Der Mini-Vault enthält 3 Ordner, 3 Regeln und 6 Vorlagen
+          (3 Deutsch + 3 Englisch). Die Vollversion
+          (Second Brain Starter) ergänzt 8 Themen-Hubs, 14 Vorlagen, 6
+          Methodik-Guides und das vollständige Design. Sie erscheint in Kürze —
+          die Warteliste informiert dich zuerst.</p>
+        </details>
+        <details>
+          <summary>Was passiert mit meiner E-Mail-Adresse?</summary>
+          <p>Sie wird nur für die einmalige Benachrichtigung zum Erscheinen der
+          Vollversion genutzt. Kein Spam, keine Weitergabe an Dritte.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="lang-en">
+      <p><strong>Second Brain in 10 Minutes</strong> — a free offer from the Second Brain Starter project.</p>
+      <p>Personal, non-commercial use · No affiliate, no ads · Content: English + German (templates currently German, EN set coming)</p>
+    </div>
+    <div class="lang-de" hidden>
+      <p><strong>Second Brain in 10 Minuten</strong> — ein kostenloses Angebot aus dem Second Brain Starter Projekt.</p>
+      <p>Persönliche, nicht-kommerzielle Nutzung · Kein Affiliate, keine Werbung · Inhalte: Englisch + Deutsch (Vorlagen aktuell Deutsch, EN-Set in Arbeit)</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Sprach-Toggle + Warteliste.
+   Sprache: ?lang= Parameter (siehe Head-Skript) > localStorage > Standard EN. */
+var WAITLIST_EMAIL = "geld.hamster@gmx.net";
+
+function applyLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll(".lang-en").forEach(function (el) { el.hidden = (lang !== "en"); });
+  document.querySelectorAll(".lang-de").forEach(function (el) { el.hidden = (lang !== "de"); });
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+  });
+}
+
+document.querySelectorAll(".lang-btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var lang = btn.getAttribute("data-lang");
+    try { localStorage.setItem("sbs-lang", lang); } catch (e) {}
+    applyLang(lang);
+  });
+});
+applyLang(window.__sbsLang || "en");
+
+/* Warteliste: öffnet das E-Mail-Programm mit vorgefertigter Nachricht.
+   Pro Sprach-Block ein Formular (data-subject / data-status sprachspezifisch). */
+document.querySelectorAll(".waitlist-form").forEach(function (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = form.querySelector('input[type="email"]').value.trim();
+    var name = form.querySelector('input[type="text"]').value.trim();
+    if (!email) { return; }
+    var subject = encodeURIComponent(form.getAttribute("data-subject"));
+    var isDe = form.id.indexOf("-de") !== -1;
+    var bodyText = isDe
+      ? "Hallo,\n\nbitte nimm mich in die Warteliste für den Second Brain Starter auf.\n\n"
+      : "Hello,\n\nplease add me to the waitlist for the Second Brain Starter.\n\n";
+    var body = encodeURIComponent(
+      bodyText + "Email: " + email + (name ? "\nName: " + name : "") +
+      "\n\n--\nSent via the landing page"
+    );
+    window.location.href = "mailto:" + WAITLIST_EMAIL + "?subject=" + subject + "&body=" + body;
+    var statusEl = form.parentElement.querySelector(".waitlist-status");
+    statusEl.textContent = form.getAttribute("data-status");
+    statusEl.classList.add("visible");
+  });
+});
+</script>
+</body>
+</html>
