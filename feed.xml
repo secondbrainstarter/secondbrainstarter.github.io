@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Second Brain Starter — Blog</title>
+    <link>https://secondbrainstarter.github.io/blog/</link>
+    <description>Free Obsidian templates and practical note-system workflows: inbox rule, daily note, linking, 17-minute rhythm. Bilingual (EN/DE).</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 Aug 2026 09:22:53 +0000</lastBuildDate>
+    <atom:link href="https://secondbrainstarter.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+      <title>Zettelkasten vs. PARA vs. Minimal: Which Obsidian System Is Right for You?</title>
+      <link>https://secondbrainstarter.github.io/blog/zettelkasten-vs-para-vs-minimal-which-obsidian-system-is-right-for-you.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/zettelkasten-vs-para-vs-minimal-which-obsidian-system-is-right-for-you.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Search for “Obsidian system” and you quickly drown in advice: Zettelkasten purists, PARA devotees, template packs with forty folders. Most of that advice is not wrong — it is just written for someone else. The honest question is not “whi...</description>
+    </item>
+    <item>
+      <title>Always Link: How Links Turn a Note Collection into a Second Brain</title>
+      <link>https://secondbrainstarter.github.io/blog/always-link-how-links-turn-a-note-collection-into-a-second-brain.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/always-link-how-links-turn-a-note-collection-into-a-second-brain.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Most note systems fail at an invisible problem: they collect diligently, but the notes stay islands. Each file sits alone, and whoever looks for it later first has to remember that it exists at all. Linking is the one rule that turns a f...</description>
+    </item>
+    <item>
+      <title>Find, Don&#x27;t Search: Why a Second Brain Reminds You of Your Ideas</title>
+      <link>https://secondbrainstarter.github.io/blog/find-don-t-search-why-a-second-brain-reminds-you-of-your-ideas.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/find-don-t-search-why-a-second-brain-reminds-you-of-your-ideas.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Most note systems do not fail while you collect — they fail when you try to find. A few weeks in, the collection is full, and the moment you actually need something, you cannot find it. So you search, and the search returns twenty simila...</description>
+    </item>
+    <item>
+      <title>Permanent Note or Project Note? Which Note Type Carries Your System</title>
+      <link>https://secondbrainstarter.github.io/blog/permanent-note-or-project-note-which-note-type-carries-your-system.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/permanent-note-or-project-note-which-note-type-carries-your-system.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Most collections do not die from collecting — they die from never being reused. Notes get created, filed away, and never opened again. The reason is almost always the same: it was never clear what the note was supposed to be. Two note ty...</description>
+    </item>
+    <item>
+      <title>The Daily Note: Why a Date in the Filename Keeps Your System Alive</title>
+      <link>https://secondbrainstarter.github.io/blog/the-daily-note-why-a-date-in-the-filename-keeps-your-system-alive.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/the-daily-note-why-a-date-in-the-filename-keeps-your-system-alive.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Most note systems do not fail while you build them — they fail while you use them daily. The structure is exciting for two weeks, then it becomes just another chore. The simplest counter-move is also the most unassuming part of the Mini-...</description>
+    </item>
+    <item>
+      <title>The 17-Minute Rule: How a Fixed Evening Routine Keeps Your Note System Alive</title>
+      <link>https://secondbrainstarter.github.io/blog/the-17-minute-rule-how-a-fixed-evening-routine-keeps-your-note-system-alive.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/the-17-minute-rule-how-a-fixed-evening-routine-keeps-your-note-system-alive.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Most note systems do not die from the wrong structure but from a missing rhythm: collecting starts with enthusiasm, after two weeks the inbox stays full, after a month nobody opens the vault anymore. The counter-movement is a fixed, shor...</description>
+    </item>
+    <item>
+      <title>The Inbox Rule: Why 3 Folders Are Enough to Keep Your Note System from Collapsing</title>
+      <link>https://secondbrainstarter.github.io/blog/the-inbox-rule-why-3-folders-are-enough-to-keep-your-note-system-from-collapsing.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/the-inbox-rule-why-3-folders-are-enough-to-keep-your-note-system-from-collapsing.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Most note systems fail not on the idea but on the structure: too many folders, too many rules, too much maintenance. After two weeks the collection is there — and nobody dares to touch it anymore. The counter-movement is radically simple...</description>
+    </item>
+    <item>
+      <title>Your Second Brain in 10 Minutes: A Free Obsidian Starter Vault</title>
+      <link>https://secondbrainstarter.github.io/blog/your-second-brain-in-10-minutes-a-free-obsidian-starter-vault.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/your-second-brain-in-10-minutes-a-free-obsidian-starter-vault.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Many people start with Obsidian and give up after the first week — the empty vault is overwhelming, and designing your own system feels like a project of its own. That is why the Second Brain Mini-Vault exists: a ready-made, small Obsidi...</description>
+    </item>
+    <item>
+      <title>Wiederfinden statt Suchen: Warum ein Second Brain dich an deine Ideen erinnert</title>
+      <link>https://secondbrainstarter.github.io/blog/wiederfinden-statt-suchen-warum-ein-second-brain-dich-an-deine-ideen-erinnert.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/wiederfinden-statt-suchen-warum-ein-second-brain-dich-an-deine-ideen-erinnert.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Die meisten Notizsysteme scheitern nicht beim Sammeln, sondern beim Wiederfinden: Nach ein paar Wochen ist die Sammlung voll, aber wenn du etwas brauchst, findest du es nicht. Also wird gesucht — und die Suche liefert zwanzig ähnliche Tr...</description>
+    </item>
+    <item>
+      <title>Die Tagesnote: Warum ein Datum im Dateinamen dein System am Laufen hält</title>
+      <link>https://secondbrainstarter.github.io/blog/die-tagesnote-warum-ein-datum-im-dateinamen-dein-system-am-laufen-halt.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/die-tagesnote-warum-ein-datum-im-dateinamen-dein-system-am-laufen-halt.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Die meisten Notizsysteme scheitern nicht beim Aufbau, sondern beim täglichen Benutzen: Am Anfang ist die Struktur spannend, nach zwei Wochen ist sie nur noch Arbeit. Der einfachste Gegentrick ist auch der unscheinbarste Baustein des Mini...</description>
+    </item>
+    <item>
+      <title>Immer verlinken: So wird aus einer Notizensammlung ein Second Brain</title>
+      <link>https://secondbrainstarter.github.io/blog/immer-verlinken-so-wird-aus-einer-notizensammlung-ein-second-brain.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/immer-verlinken-so-wird-aus-einer-notizensammlung-ein-second-brain.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Die meisten Notizsysteme scheitern an einem unsichtbaren Problem: Sie sammeln fleißig, aber die Notizen bleiben Inseln. Jede Datei liegt für sich, und wer sie später sucht, muss sich erst einmal erinnern, dass es sie überhaupt gibt. Verl...</description>
+    </item>
+    <item>
+      <title>Permanentnote oder Projektnote? Wann welche Notiz dein System trägt</title>
+      <link>https://secondbrainstarter.github.io/blog/permanentnote-oder-projektnote-wann-welche-notiz-dein-system-tragt.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/permanentnote-oder-projektnote-wann-welche-notiz-dein-system-tragt.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Die meisten Sammlungen sterben nicht am Sammeln, sondern am nicht Wiederverwenden: Notizen werden angelegt, abgelegt und nie wieder geöffnet. Der Grund ist fast immer derselbe — es war nie klar, was die Notiz eigentlich sein sollte. Zwei...</description>
+    </item>
+    <item>
+      <title>Die 17-Minuten-Regel: Wie eine feste Abendroutine dein Notizsystem am Leben hält</title>
+      <link>https://secondbrainstarter.github.io/blog/die-17-minuten-regel-wie-eine-feste-abendroutine-dein-notizsystem-am-leben-halt.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/die-17-minuten-regel-wie-eine-feste-abendroutine-dein-notizsystem-am-leben-halt.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Die meisten Notizsysteme sterben nicht an der falschen Struktur, sondern an fehlendem Rhythmus: Am Anfang wird eifrig gesammelt, nach zwei Wochen bleibt der Eingangskorb voll, nach einem Monat öffnet niemand mehr den Vault. Die Gegenbewe...</description>
+    </item>
+    <item>
+      <title>Die Inbox-Regel: Warum 3 Ordner reichen, damit dein Notizsystem nicht kippt</title>
+      <link>https://secondbrainstarter.github.io/blog/die-inbox-regel-warum-3-ordner-reichen-damit-dein-notizsystem-nicht-kippt.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/die-inbox-regel-warum-3-ordner-reichen-damit-dein-notizsystem-nicht-kippt.html</guid>
+      <pubDate>Tue, 04 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Die meisten Notizsysteme scheitern nicht an der Idee, sondern an der Struktur: zu viele Ordner, zu viele Regeln, zu viel Pflege. Nach zwei Wochen steht die Sammlung, niemand traut sich mehr hinein. Die Gegenbewegung ist radikal einfach:...</description>
+    </item>
+    <item>
+      <title>Kostenloser Mini-Vault: Second Brain in 10 Minuten</title>
+      <link>https://secondbrainstarter.github.io/blog/kostenloser-mini-vault-second-brain-in-10-minuten.html</link>
+      <guid isPermaLink="true">https://secondbrainstarter.github.io/blog/kostenloser-mini-vault-second-brain-in-10-minuten.html</guid>
+      <pubDate>Mon, 03 Aug 2026 12:00:00 +0000</pubDate>
+      <description>Viele fangen mit Obsidian an und geben nach der ersten Woche auf — das leere Vault ist überfordernd, das eigene System will erst entworfen sein. Deshalb gibt es jetzt den Second Brain Mini-Vault: ein fertiger, kleiner Obsidian-Vault, der...</description>
+    </item>
+  </channel>
+</rss>
