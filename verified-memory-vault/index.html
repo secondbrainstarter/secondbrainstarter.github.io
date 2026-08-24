@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Verified Memory Vault — a free, self-checking Obsidian vault for AI coding agents: persistent memory that proves it works. Health score, dead-link scan, git guard against mass deletion. No Node, no plugins.">
+<title>Verified Memory Vault — Self-Checking Memory for AI Coding Agents</title>
+<meta property="og:title" content="Verified Memory Vault — Self-Checking Memory for AI Coding Agents">
+<meta property="og:description" content="A free, self-checking Obsidian vault for AI coding agents: health score, dead-link scan, git guard against mass deletion. No Node, no plugins.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://secondbrainstarter.github.io/verified-memory-vault/">
+<link rel="canonical" href="https://secondbrainstarter.github.io/verified-memory-vault/">
+<style>
+:root {
+  --vmv-accent: #2e9e6b;
+  --vmv-accent-strong: #1f7a51;
+  --vmv-bg: #f7faf8;
+  --vmv-card: #ffffff;
+  --vmv-border: #dce7e0;
+  --vmv-text: #22302a;
+  --vmv-muted: #6b7a72;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vmv-accent: #4fc48d;
+    --vmv-accent-strong: #7fd9ac;
+    --vmv-bg: #12171a;
+    --vmv-card: #1a2225;
+    --vmv-border: #2c383d;
+    --vmv-text: #e4ece7;
+    --vmv-muted: #93a39a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--vmv-bg);
+  color: var(--vmv-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+.badge {
+  display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--vmv-accent-strong);
+  background: rgba(46,158,107,.12); border: 1px solid rgba(46,158,107,.35);
+  border-radius: 999px; padding: .25rem .8rem; margin-bottom: 1rem;
+}
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; margin: 0 0 .75rem; }
+.lead { font-size: 1.15rem; color: var(--vmv-muted); margin: 0 0 1.5rem; }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 2rem; }
+.btn {
+  display: inline-block; padding: .7rem 1.3rem; border-radius: 10px;
+  text-decoration: none; font-weight: 600; border: 1px solid transparent;
+}
+.btn-primary { background: var(--vmv-accent); color: #fff; }
+.btn-primary:hover { background: var(--vmv-accent-strong); }
+.btn-secondary { border-color: var(--vmv-border); color: var(--vmv-text); }
+.btn-secondary:hover { border-color: var(--vmv-accent); }
+h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; }
+ul { padding-left: 1.2rem; }
+li { margin: .3rem 0; }
+code {
+  background: rgba(127,127,127,.14); border-radius: 5px; padding: .1em .35em;
+  font-size: .92em;
+}
+.card {
+  background: var(--vmv-card); border: 1px solid var(--vmv-border);
+  border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0;
+}
+footer { margin-top: 3rem; font-size: .85rem; color: var(--vmv-muted); border-top: 1px solid var(--vmv-border); padding-top: 1rem; }
+a { color: var(--vmv-accent-strong); }
+</style>
+</head>
+<body>
+<main>
+  <span class="badge">Free &middot; Open Source</span>
+  <h1>Verified Memory Vault</h1>
+  <p class="lead">A self-checking Obsidian vault for AI coding agents (Claude&nbsp;Code, Codex, Gemini&nbsp;CLI, &hellip;) — persistent memory that <strong>proves it works</strong>.</p>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/secondbrainstarter/verified-memory-vault" rel="noopener">Get it on GitHub</a>
+    <a class="btn btn-secondary" href="https://github.com/secondbrainstarter/verified-memory-vault#quick-start-10-minutes" rel="noopener">Quick start (10 min)</a>
+  </div>
+
+  <div class="card">
+    <strong>Why "verified"?</strong> Plain vault templates assume your agent's memory still works.
+    This one checks itself and protects itself:
+  </div>
+
+  <ul>
+    <li><strong>Health score:</strong> <code>python3 tools/memory_check.py</code> reports protocol violations, dead links, bloat, inbox pressure — honest, with exit codes.</li>
+    <li><strong>Self-protection:</strong> an optional git pre-commit hook refuses the commit that deletes your agent's brain — the documented way agent memories die.</li>
+    <li><strong>Zero dependencies:</strong> two ~200-line Python stdlib scripts. No Node, no TypeScript, no plugins, no database.</li>
+    <li><strong>Bilingual:</strong> EN + DE templates; the agent mirrors your language.</li>
+    <li><strong>License:</strong> vault content CC BY 4.0 (commercial use fine), tools MIT.</li>
+  </ul>
+
+  <h2>The three rules</h2>
+  <ol>
+    <li><strong>Capture, don't sort</strong> — everything lands in <code>00_Inbox/</code> first.</li>
+    <li><strong>Every session leaves a daily note</strong> — so the next session resumes cold.</li>
+    <li><strong>Promote durable facts to <code>MEMORY.md</code></strong> — append-only, dated, one line, verifiable only.</li>
+  </ol>
+
+  <footer>
+    Companion to the human-side <a href="/" rel="noopener">Second Brain Starter</a> —
+    the free starter vault for people who want a working note system in 10 minutes.
+    &nbsp;&middot;&nbsp; Verified Memory Vault v0.9
+  </footer>
+</main>
+</body>
+</html>
