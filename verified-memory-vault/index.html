@@ -90,6 +90,16 @@ a { color: var(--vmv-accent-strong); }
     This one checks itself and protects itself:
   </div>
 
+  <figure style="margin:1.25rem 0;">
+    <img src="media/memory-check-demo.png"
+         alt="Terminal: memory_check.py reports HEALTHY 100/100; memory_guard.py refuses a commit that mass-deletes memory files"
+         loading="lazy" decoding="async"
+         style="max-width:100%;height:auto;border:1px solid var(--vmv-border);border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.08);">
+    <figcaption style="font-size:.85rem;color:var(--vmv-muted);margin-top:.5rem;">
+      The health check passing — and the guard refusing a mass-deletion commit. Both run in under a second, stdlib only.
+    </figcaption>
+  </figure>
+
   <ul>
     <li><strong>Health score:</strong> <code>python3 tools/memory_check.py</code> reports protocol violations, dead links, bloat, inbox pressure — honest, with exit codes.</li>
     <li><strong>Self-protection:</strong> an optional git pre-commit hook refuses the commit that deletes your agent's brain — the documented way agent memories die.</li>
