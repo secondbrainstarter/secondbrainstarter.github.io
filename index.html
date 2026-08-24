@@ -788,9 +788,13 @@ document.querySelectorAll(".waitlist-form").forEach(function (form) {
   }
   document.addEventListener("click", function (ev) {
     var a = ev.target.closest && ev.target.closest('a[href*="verified-memory-vault"]');
-    if (!a) return;
-    gcEvent(a.getAttribute("href").indexOf("/verified-memory-vault/") === 0
-      ? "landing-vmv-cta" : "landing-vmv-other");
+    if (a) {
+      gcEvent(a.getAttribute("href").indexOf("/verified-memory-vault/") === 0
+        ? "landing-vmv-cta" : "landing-vmv-other");
+      return;
+    }
+    var z = ev.target.closest && ev.target.closest('a[href$=".zip"]');
+    if (z) gcEvent("landing-zip-download");
   }, false);
 })();
 </script>
