@@ -111,5 +111,29 @@ a { color: var(--vmv-accent-strong); }
     &nbsp;&middot;&nbsp; Verified Memory Vault v0.9
   </footer>
 </main>
+<script>
+// Funnel instrumentation: track ZIP-download and outbound GitHub clicks as GoatCounter events.
+(function () {
+  function gcEvent(name) {
+    try {
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count({ path: "event-" + name, event: true, title: name });
+        return;
+      }
+    } catch (e) { /* analytics must never break the page */ }
+    // Fallback: pixel request so the event counts even if count.js is still loading.
+    var img = new Image();
+    img.src = "https://secondbrainstarter.goatcounter.com/count?event=true&p=" +
+      encodeURIComponent("event-" + name) + "&rnd=" + Math.random().toString(36).slice(2);
+  }
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest && ev.target.closest("a");
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf(".zip") !== -1) gcEvent("vmv-zip-download");
+    else if (href.indexOf("github.com/secondbrainstarter/verified-memory-vault") !== -1) gcEvent("vmv-github-click");
+  }, false);
+})();
+</script>
 </body>
 </html>

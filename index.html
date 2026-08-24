@@ -772,5 +772,27 @@ document.querySelectorAll(".waitlist-form").forEach(function (form) {
   });
 });
 </script>
+<script>
+// Funnel instrumentation: track VMV CTA clicks as GoatCounter events.
+(function () {
+  function gcEvent(name) {
+    try {
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count({ path: "event-" + name, event: true, title: name });
+        return;
+      }
+    } catch (e) { /* analytics must never break the page */ }
+    var img = new Image();
+    img.src = "https://secondbrainstarter.goatcounter.com/count?event=true&p=" +
+      encodeURIComponent("event-" + name) + "&rnd=" + Math.random().toString(36).slice(2);
+  }
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href*="verified-memory-vault"]');
+    if (!a) return;
+    gcEvent(a.getAttribute("href").indexOf("/verified-memory-vault/") === 0
+      ? "landing-vmv-cta" : "landing-vmv-other");
+  }, false);
+})();
+</script>
 </body>
 </html>
